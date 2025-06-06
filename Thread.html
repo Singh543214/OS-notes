@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+          <li><a href="Syncronization.html">Synchronization</a></li>
+          <li><a href="Deadlock.html">Deadlocks</a></li>
+          <li><a href="Memorymanagement.html">Memory Management</a></li>
+          <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Thread <img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1>
+     <p> A thread is a lightweight process and forms the basic unit of
+ CPU utilization. A process can perform more than one task at the same time by including
+ multiple threads.</p><br>
+ <ul style="margin-left: 20px;">
+    <li>A thread has its own program counter, register set, and stack.</li>
+    <li> A thread shares resources with other threads of the same process: the code section,
+ the data section, files and signals</li>
+ </ul><br>
+ <p><strong><u>Note:</u></strong>&nbsp;-&nbsp; A new thread, or a child process of a given process, can be introduced by using
+ the fork() system call. A process with n fork() system call generates &nbsp; 2<sup>n–1</sup> child
+ processes.</p><br>
+ <h2> Components of a Thread</h2><br>
+ <p>Each thread has:</p>
+ <ul style="margin-left: 20px;">
+    <li>Program Counter</li>
+    <li>Registers</li>
+    <li>Stack</li>
+ </ul>
+ <p>Threads <strong>share</strong>:</p>
+ <ul style="margin-left: 20px;">
+    <li>Code section</li>
+    <li>Data section</li>
+    <li>Open files/resources</li>
+ </ul><br>
+ <h2>Thread&nbsp;vs.&nbsp;Process</h2><br>
+ <table style="width: 60%;height: 200px; border-collapse: collapse; margin-left: 20px;">
+    <tr>
+      <th style="text-align: left; width: 21%;">Feature</th>
+      <th style="text-align: left;">Process</th>
+      <th style="text-align: left;">Thread</th>
+    </tr>
+    <tr>
+        <td>Definition</td>
+        <td>Independent executing program</td>
+        <td>Lightweight unit of a process</td>
+    </tr>
+    <tr>
+        <td>Memory</td>
+        <td>Has its own address space</td>
+        <td>Shares memory with other threads</td>
+    </tr>
+    <tr>
+        <td>Overhead</td>
+        <td>High (context switching is costly)</td>
+        <td>Low (faster to create and switch)</td>
+    </tr>
+    <tr>
+        <td>Communication</td>
+        <td>Complex (via IPC)</td>
+        <td>Easy (shared memory)</td>
+    </tr>
+    <tr>
+        <td>Crash impact</td>
+        <td>Doesn’t affect others</td>
+        <td>Can crash the whole process</td>
+    </tr>
+ </table><br>
+ <h2>Types of Threads</h2><br><br>  
+ <ol style="margin-left: 20px;">
+    <li style="font-size: 18px;"><strong>User-Level Threads (ULT):</strong>
+    <ul>
+        <li>Managed by user-level libraries.</li>
+        <li>OS doesn't know about them.</li>
+        <li>Fast creation and context switch.</li>
+        <li>But if one thread blocks, all do.</li>
+    </ul></li><br><br>
+    <li style="font-size: 18px;"><strong>Kernel-Level Threads (KLT):</strong>
+    <ul>
+        <li>Managed directly by the OS.</li>
+        <li>More overhead.</li>
+        <li>True parallelism on multi-core systems.</li>
+    </ul></li><br><br>
+    <li style="font-size: 18px;"><strong>Hybrid (Combined):</strong>
+    <ul>
+        <li>Combines both ULT and KLT (e.g., many-to-many model).</li>
+    </ul></li>
+ </ol>
+    </main>
+  </div>
+</body>
+</html>

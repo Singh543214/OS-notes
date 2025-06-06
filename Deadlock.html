@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+        <li><a href="Syncronization.html">Synchronization</a></li>
+        <li><a href="Memorymanagement.html">Memory Management</a></li>
+        <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Deadlocks <img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1><br>
+      <p> A situation where a set of processes are blocked because each process is holding a
+ resource and waiting for another resource acquired by some other process. Deadlock
+ can arise if following four conditions hold simultaneously (Necessary Conditions):</p><br>
+ <ul style="margin-left: 20px; line-height: 2; font-size: 18px;">
+    <li><strong><u>Mutual Exclusion</u></strong>&nbsp;-&nbsp;One or more than one resource is non-sharable (Only one
+ process can use at a time).</li>
+    <li><strong><u>Hold and Wait</u></strong>&nbsp;-&nbsp; A process is holding at least one resource and waiting for
+ resources.</li>
+    <li><strong><u>No Preemption</u></strong>&nbsp;-&nbsp; A resource cannot be taken from a process unless the process
+ releases the resource.</li>
+    <li><strong><u>Circular Wait</u></strong>&nbsp;-&nbsp; A set of processes are waiting for each other in circular form</li>
+ </ul><br>
+ <h2>Methods for handling deadlock</h2><br>
+ <p> There are three ways to handle deadlock:</p><br>
+ <ol style="margin-left: 20px; line-height: 2; font-size: 18px;">
+    <li><strong><u>Deadlock prevention or avoidance</u></strong>&nbsp;:&nbsp;The idea is to not let the system into a deadlock state.</li>
+    <li><strong><u>Deadlock detection and recovery</u></strong>&nbsp;:&nbsp;: Let deadlock occur, then do preemption to handle it once occurred.</li>
+    <li><strong><u>Ignore the problem all together </u></strong>&nbsp;:&nbsp; If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.</li>
+ </ol><br>
+ <h2>Banker's algorithm</h2><br>
+ <p>Banker's algorithm is used to avoid deadlock. It is one of the deadlock-avoidance
+ methods. It is named as Banker's algorithm on the banking system where a bank
+ never allocates available cash in such a manner that it can no longer satisfy the
+ requirements of all of its customers.</p>
+    </main>
+  </div>
+</body>
+</html>

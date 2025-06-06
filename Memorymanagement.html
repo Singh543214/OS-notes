@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+        <li><a href="Syncronization.html">Synchronization</a></li>
+        <li><a href="Memorymanagement.html">Memory Management</a></li>
+        <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Memory Management<img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1><br>
+      <p>Memory management is a crucial function of the <strong>operating system</strong> (OS) that handles or manages the primary memory (RAM) of a computer system. It keeps track of every byte in a computer’s memory and efficiently allocates memory to processes and frees it when not in use.
+</p><br>
+<h2>Functions of Memory Management</h2><br>
+<ul style="margin-left: 20px;">
+    <li><strong>Keeping Track of Memory</strong>&nbsp;:&nbsp;Maintains a record of allocated and free memory blocks.</li>
+    <li><strong>Memory Allocation and Deallocation</strong>&nbsp;:&nbsp;Allocates memory to processes and reclaims it when they finish execution.</li>
+    <li><strong>Process Isolation</strong>&nbsp;:&nbsp;Ensures that one process does not interfere with another process’s memory.</li>
+    <li><strong>Swapping</strong>&nbsp;:&nbsp;Moves processes between main memory and disk (secondary storage) to manage limited memory.</li>
+    <li><strong>Protection and Sharing</strong>&nbsp;:&nbsp;Provides mechanisms to protect memory and enable safe sharing.</li>
+</ul><br>
+<h2>Memory Allocation Techniques</h2><br>
+<ol style="margin-left: 20px;">
+    <li><strong style="font-size: 20px;">Contiguous Memory Allocation</strong> <ul style="margin-left: 15px;">
+        <li>Each process is allocated a single contiguous block of memory.</li>
+        <li style="margin-top: 6px;">There are two types:</li>
+        <ul style="margin-left: 25px;">
+            <li><strong>Fixed Partitioning</strong></li>
+            <li><strong>Fixed Partitioning</strong></li>
+        </ul>
+    </ul>
+<br>
+<strong style="font-size: 19px; margin-left: 6px;">Disadvantages:</strong>
+<ul style="margin-left: 30px;">
+    <li>Internal fragmentation</li>
+    <li>External fragmentation</li>
+</ul></li>
+<li style="margin-top: 15px;"><strong style="font-size: 20px;">Non-Contiguous Memory Allocation</strong><br>
+<ol type="a" style="margin-left: 20px; line-height: 1;">
+    <li style="margin-top: 12px;"><strong style="font-size: 18px;">Paging</strong>
+    <ul style="margin-left: 25px;">
+        <li>Divides physical memory into fixed-size frames and logical memory into pages.</li>
+        <li>Avoids external fragmentation.</li>
+    </ul></li>
+    <li style="margin-top: 15px;"><strong style="font-size: 18px;">Segmentation</strong><ul style="margin-left: 25px;">
+        <li>Divides memory based on logical segments like code, data, stack.</li>
+        <li>Each segment has a base and limit.</li>
+    </ul></li>
+    <li style="margin-top: 15px;"><strong style="font-size: 18px;">Paged Segmentation</strong>
+    <ul style="margin-left: 25px;">
+        <li>Combination of paging and segmentation for more flexibility.</li>
+    </ul></li>
+</ol></li>
+</ol><br>
+<h2>Single/Multiple Partition Allocation Schemes</h2><br>
+<ul style="margin-top: 8px; margin-left: 20px; line-height: 2;">
+    <li><strong style="font-size: 20px;"><u>Single Partition Allocation Schemes</u></strong>&nbsp;:&nbsp; The memory is divided into two parts. One
+ part is kept to be used by the OS and the other is kept to be used by the users.</li>
+    <li><strong style="font-size: 20px;"><u>Multiple Partition Schemes</u></strong>&nbsp;:&nbsp;<ol style="margin-left: 25px;">
+        <li><strong>Fixed Partition</strong>&nbsp;:&nbsp;The memory is divided into fixed size partitions.</li>
+        <li><strong>Variable Partition </strong>&nbsp;:&nbsp;The memory is divided into variable sized partitions.</li>
+    </ol></li>
+</ul>
+<h2>Virtual Memory</h2><br>
+<p>Virtual memory is a memory management technique where secondary storage (like a hard disk or SSD) is used as if it were part of the main memory (RAM). It allows the system to run larger programs or more processes than physically available memory.</p>
+<p>It creates the <strong>illusion</strong> of a very large main memory by <strong>temporarily</strong> transferring data between RAM and disk.</p><br><br>
+<h3>Points Related to Virtual Memory:</h3>
+<ul style="margin-left: 20px;">
+    <li><strong>Demand Paging</strong>&nbsp;:&nbsp;Loads pages only when they are needed.</li>
+    <li><strong>Page Fault</strong>&nbsp;:&nbsp;When a referenced page is not in memory.</li>
+    <li><strong>Thrashing</strong>&nbsp;:&nbsp;Excessive paging causing low CPU utilization.</li>
+</ul><br>
+<h2> Variable partition allocation schemes:</h2><br>
+<ul style="margin-left: 20px;">
+    <li><strong>First Fit</strong>&nbsp;:&nbsp;The arriving process is allotted the first hole of memory in which it fits completely.</li>
+    <li><strong>Best Fit</strong>&nbsp;:&nbsp;The arriving process is allotted the hole of memory in which it fits the best by leaving the minimum memory empty.</li>
+    <li><strong>Worst Fit</strong>&nbsp;:&nbsp;The arriving process is allotted the hole of memory in which it leaves the maximum gap.</li>
+    <li><strong>Next Fit</strong>&nbsp;:&nbsp;Like First Fit but resumes from last fit</li>
+</ul><br>
+<h2><u>Note:</u></h2><br>
+<ul style="margin-left: 25px;">
+    <li>Best fit does not necessarily give the best results for memory allocation.</li>
+    <li>The cause of external fragmentation is the condition in Fixed partitioning and Variable partitioning saying that the entire process should be allocated in a contiguous memory location.Therefore <strong>Paging</strong> is used.</li>
+</ul><br>
+<h2> Page Replacement Algorithms:</h2>
+<ol style="font-size: 20px; margin-left: 25px; margin-top: 12px;">
+    <li><strong><u>First In First Out (FIFO)</u></strong><br><br>This is the simplest page replacement algorithm. In this algorithm, the operating
+ system keeps track of all pages in the memory in a queue, the oldest page is in the
+ front of the queue. When a page needs to be replaced, the page in the front of the
+ queue is selected for removal. <br><br> For example, consider page reference string 1, 3, 0, 3, 5, 6 and 3 page slots. Initially,
+ all slots are empty, so when 1, 3, 0 come they are allocated to the empty slots —> 3
+ Page Faults. When 3 comes, it is already in  memory so —> 0 Page Faults. Then 5
+ comes, it is not available in  memory so it replaces the oldest page slot i.e 1. —> 1
+ Page Fault. Finally, 6 comes,  it is also not available in memory so it replaces the
+ oldest page slot i.e 3 —> 1 Page Fault.
+    </li>
+    <li style="margin-top: 25px;"><strong><u>Optimal Page replacement</u></strong><br><br>In this algorithm, pages are replaced which are not used for the longest duration of
+ time in the future. <br> <br> Let us consider page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 and 4 page slots.
+ Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots —> 4
+ Page faults. 0 is already there so —> 0 Page fault. When 3 came it will take the
+ place of 7 because it is not used for the longest duration of time in the future.—> 1
+ Page fault. 0 is already there so —> 0 Page fault. 4 will takes place of 1 —> 1 Page
+ Fault. Now for the further page reference string —> 0 Page fault because they are
+ already available in the memory. <br> <br> Optimal page replacement is perfect, but not possible in practice as an operating
+ system cannot know future requests. The use of Optimal Page replacement is to set
+ up a benchmark so that other replacement algorithms can be analyzed against it.</li>
+ <li style="margin-top: 25px;"><strong><u>Least Recently Used (LRU)</u></strong><br><br>In this algorithm, the page will be replaced with the one which is least recently used.
+ Let say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 . Initially, we had 4-page
+ slots empty. Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty
+ slots —> 4 Page faults. 0 is already there so —> 0 Page fault. When 3 comes it will
+ take the place of 7 because it is least recently used —> 1 Page fault. 0 is already in
+ memory so —> 0 Page fault. 4 will take place of 1 —> 1 Page Fault. Now for the
+ further page reference string —> 0 Page fault because they are already available in
+ the memory.</li>
+ <li style="margin-top: 25px;"><strong><u>Most Recently Used (MRU)</u></strong><br><br>In this algorithm, the page will be replaced with the one which is most recently used.
+Let’s say the page reference string is:
+7 0 1 2 0 3 0 4 2 3 0 3 2.
+Initially, we had 4-page slots empty.
+So when 7, 0, 1, 2 are allocated to the empty slots → 4 Page faults.
+0 is already there → 0 Page fault.
+When 3 comes, it will take the place of 0, because it is the most recently used → 1 Page fault.
+0 comes again and replaces 3 (most recently used) → 1 Page fault.
+Then 4 comes and replaces 0, as it was just used → 1 Page fault.
+Next, 2 is already there → 0 Page fault.
+3 comes, replaces 4 (most recently used) → 1 Page fault.
+0 comes again, replaces 3 (most recently used) → 1 Page fault.
+3 again replaces 0 (most recently used) → 1 Page fault.
+Finally, 2 is already in memory → 0 Page fault.</li>
+</ol><br>
+<h2>Belady’s anomaly:</h2><br>
+<ul>
+    <li><strong>**Belady’s anomaly proves that it is possible to have more page faults when increasing
+ the number of page frames while using the First in First Out (FIFO) page
+ replacement algorithm.  For example, if we consider reference string ( 3     2     1     0
+ 3     2     4     3     2     1     0     4 ) and 3 slots, we get 9 total page faults, but if we
+ increase slots to 4, we get 10 page faults.</strong></li>
+</ul>
+    </main>
+  </div>
+</body>
+</html>

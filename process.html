@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Process -Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+   <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+         <li><a href="scheduling.html">Process Scheduling</a></li>
+          <li><a href="Thread.html">Thread</a></li>
+          <li><a href="Syncronization.html">Synchronization</a></li>
+          <li><a href="Deadlock.html">Deadlocks</a></li>
+          <li><a href="Memorymanagement.html">Memory Management</a></li>
+          <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1><strong>Process</strong><img src="freepik__process.png" alt="process" style="height: 10%; width: 5%; margin-left: 50px;"></h1><br>
+      
+      <p> A process is a program under execution. The value of the program counter
+ (PC) indicates the address of the next instruction of the process being executed.
+ Each process is represented by a Process Control Block (PCB).</p><br>
+ <p><strong>Process is an active entity (as opposed to a program, which is passive). It includes:</strong></p>
+ <ul>
+  <li><u>Program code</u></li>
+  <li><u>Program counter (PC)</u></li>
+  <li><u>Stack</u></li>
+  <li><u>Data section</u></li>
+  <li><u>Heap</u></li>
+  <li><u>Registers</u></li>
+  <li><u>OS resources (like files, CPU time)</u></li>
+ </ul>
+ <h2>Process States</h2>
+ <p>A process can be in one of the following states:</p><br>
+<table style="width: 50%;height: 200px; border-collapse: collapse;"  cellpadding="10" id="processState">
+  <tr>
+    <th style="text-align: left;"><strong>State</strong></th>
+    <th style="text-align: left;"><strong>Description</strong></th>
+  </tr>
+  <tr>
+    <td>New &nbsp;:</td>
+    <td>Process is being created.</td>
+  </tr>
+  <tr>
+    <td>Ready&nbsp;:</td>
+    <td>Waiting to be assigned to the CPU.</td>
+  </tr>
+  <tr>
+    <td>Running&nbsp;:</td>
+    <td>Instructions are being executed.</td>
+  </tr>
+  <tr>
+    <td>Waiting&nbsp;:</td>
+    <td>Waiting for some event (I/O, etc.).</td>
+  </tr>
+  <tr>
+    <td>Terminated&nbsp;:</td>
+    <td>Process has finished execution.</td>
+  </tr>
+</table>
+<h2>Process &nbsp;vs.&nbsp;  Program:</h2><br>
+<table style="width: 50%;height: 200px; border-collapse: collapse;"  cellpadding="10" id="processProgram">
+<tr>
+  <th style="text-align: left;">Feature</th>
+  <th style="text-align: left;">Program</th>
+  <th style="text-align: left;">Process</th>
+</tr>
+<tr>
+  <td>Nature&nbsp;:</td>
+  <td>Passive</td>
+  <td>Active</td>
+</tr>
+<tr>
+  <td>Stored in&nbsp;:</td>
+  <td>Disk</td>
+  <td>Main Memory</td>
+</tr>
+<tr>
+  <td>Life Cycle&nbsp;:</td>
+  <td>No execution</td>
+  <td>Has lifecycle</td>
+</tr>
+<tr>
+  <td>Example&nbsp;:</td>
+  <td>notepad.exe</td>
+  <td>An instance of Notepad running</td>
+</tr>
+</table>
+<h2>System Calls Related to Process:</h2><br>
+<ul style="margin-left: 20px;">
+  <li><strong>fork()</strong>&nbsp;–&nbsp;Create a new process</li>
+  <li><strong>exec()</strong>&nbsp;–&nbsp; Replace current process image</li>
+  <li><strong>wait()</strong>&nbsp;–&nbsp;Wait for a child to finish</li>
+  <li><strong>exit()</strong>&nbsp;–&nbsp;Terminate the process</li>
+  <li><strong>getpid()</strong>&nbsp;–&nbsp;Get process ID</li>
+</ul>
+    </main>
+  </div>
+</body>
+</html>

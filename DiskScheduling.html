@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+        <li><a href="Syncronization.html">Synchronization</a></li>
+        <li><a href="Memorymanagement.html">Memory Management</a></li>
+        <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Disk Scheduling <img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1><br>
+    <p>Disk scheduling is done by operating systems to schedule I/O
+ requests arriving for disk. Disk scheduling is also known as I/O scheduling. It aims to:</p>
+ <ul style="margin-left: 25px;">
+    <li>Minimize <strong>seek time</strong> (time to move the disk arm to the required track)</li>
+    <li>Improve <strong>throughput</strong></li>
+    <li>Reduce <strong>response time</strong></li>
+ </ul><br>
+<h2><u>Points</u>:</h2><br>
+<ul style="margin-left: 25px; line-height: 2;">
+<li><strong><u>Seek Time</u></strong>&nbsp;:&nbsp; Seek time is the time taken to locate the disk arm to a specified track
+ where the data is to be read or written.</li>
+<li><strong><u>Rotational Latency</u></strong>&nbsp;:&nbsp; Rotational Latency is the time taken by the desired sector of
+ disk to rotate into a position so that it can access the read/write heads.</li>
+<li><strong><u>Transfer Time</u></strong>&nbsp;:&nbsp; Transfer time is the time to transfer the data. It depends on the
+ rotating speed of the disk and number of bytes to be transferred.</li>
+<li><strong><u>Disk Access Time</u></strong>&nbsp;:&nbsp; Seek Time + Rotational Latency + Transfer Time</li>
+<li><strong><u>Disk Response Time</u></strong>&nbsp;:&nbsp;Response Time is the average of time spent by a request
+ waiting to perform its I/O operation. Average Response time is the response time of
+ all requests.</li>
+</ul><br>
+<h2>Disk Scheduling Algorithms </h2><br>
+<ol style="margin-top: 20px; margin-left: 20px;">
+    <li><strong style="font-size: 19px;"><u>FCFS</u></strong>&nbsp;:&nbsp; FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the order they arrive in the disk queue.</li><br><br>
+    <li><strong style="font-size: 19px;"><u>SSTF</u></strong>&nbsp;:&nbsp; In SSTF (Shortest Seek Time First), requests having the shortest seek time
+ are executed first. So, the seek time of every request is calculated in advance in a
+ queue and then they are scheduled according to their calculated seek time. As a
+ result, the request near the disk arm will get executed first.</li><br><br>
+    <li><strong style="font-size: 19px;"><u>SCAN</u></strong>&nbsp;:&nbsp; In SCAN algorithm the disk arm moves into a particular direction and
+ services the requests coming in its path and after reaching the end of the disk, it
+ reverses its direction and again services the request arriving in its path. So, this
+ algorithm works like an elevator and hence is also known as elevator algorithm.</li><br><br>
+    <li><strong style="font-size: 19px;"><u>CSCAN</u></strong>&nbsp;:&nbsp; In SCAN algorithm, the disk arm again scans the path that has been
+ scanned, after reversing its direction. So, it may be possible that too many requests
+ are waiting at the other end or there may be zero or few requests pending at the
+ scanned area.</li><br><br>
+    <li><strong style="font-size: 19px;"><u>LOOK</u></strong>&nbsp;:&nbsp;:It is similar to the SCAN disk scheduling algorithm except for the difference
+ that the disk arm in spite of going to the end of the disk goes only to the last request
+ to be serviced in front of the head and then reverses its direction from there only.
+ Thus it prevents the extra delay which occurred due to unnecessary traversal to the
+ end of the disk.</li><br><br>
+    <li><strong style="font-size: 19px;"><u>CLOOK</u></strong>&nbsp;:&nbsp;As LOOK is similar to SCAN algorithm, CLOOK is similar to CSCAN disk
+ scheduling algorithm. In CLOOK, the disk arm in spite of going to the end goes only
+ to the last request to be serviced in front of the head and then from there goes to the
+ other end’s last request. Thus, it also prevents the extra delay which occurred due to
+ unnecessary traversal to the end of the disk.</li>
+</ol>
+    </main>
+  </div>
+</body>
+</html>

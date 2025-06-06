@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Types of OS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+         <li><a href="scheduling.html">Process Scheduling</a></li>
+          <li><a href="Thread.html">Thread</a></li>
+          <li><a href="Syncronization.html">Synchronization</a></li>
+          <li><a href="Memorymanagement.html">Memory Management</a></li>
+          <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Types of Operating Systems</h1><br>
+      <ul>
+        <li><strong>Batch OS</strong>: A set of similar jobs are stored in the main memory for execution. A job gets
+ assigned to the CPU, only when the execution of the previous job completes.</li><br>
+        <li><strong>Multiprogramming OS</strong>: The main memory consists of jobs waiting for CPU time. The
+ OS selects one of the processes and assigns it to the CPU. Whenever the executing
+ process needs to wait for any other operation (like I/O), the OS selects another process
+ from the job queue and assigns it to the CPU. This way, the CPU is never kept idle
+ and the user gets the flavor of getting multiple tasks done at once.</li><br>
+        <li><strong>Multitasking OS</strong>:  Multitasking OS combines the benefits of Multiprogramming OS
+ and CPU scheduling to perform quick switches between jobs. The switch is so quick
+ that the user can interact with each program as it runs.</li><br>
+        <li><strong>Time Sharing OS</strong>: Time-sharing systems require interaction with the user to instruct
+ the OS to perform various tasks. The OS responds with an output. The instructions are
+ usually given through an input device like the keyboard.</li><br>
+        <li><strong>Real-Time OS</strong>: Real-Time OS are usually built for dedicated systems to accomplish a
+ specific set of tasks within deadlines.</li>
+      </ul>
+    </main>
+  </div>
+</body>
+</html>

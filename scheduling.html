@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+          <li><a href="Syncronization.html">Synchronization</a></li>
+          <li><a href="Deadlock.html">Deadlocks</a></li>
+          <li><a href="Memorymanagement.html">Memory Management</a></li>
+          <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Process Scheduling <img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1>
+     <p>Process Scheduling is the activity of the operating system that decides which process will run next on the CPU when there are multiple processes in the ready queue.</p><br>
+     <h2>Objective of Process Scheduling</h2>
+     <ul style="margin-left: 20px;">
+      <li>Maximize CPU utilization.</li>
+      <li>Minimize waiting time, turnaround time, and response time.</li>
+      <li>Ensure fairness and avoid starvation.</li>
+      <li>Provide balanced performance.</li>
+     </ul><br>
+     <h2> Process Scheduling Queue</h2>
+     <ul style="margin-left: 20px;">
+      <li><strong>Job Queue </strong>&nbsp;–&nbsp;Contains all processes in the system.</li>
+      <li><strong>Ready Queue</strong>&nbsp;–&nbsp;Contains processes ready to execute on the CPU.</li>
+      <li><strong>Waiting Queue</strong>&nbsp;–&nbsp;Processes waiting for I/O or other events.</li>
+     </ul><br>
+     <h2>Types of Schedulers</h2>
+     <ul style="margin-left: 20px;">
+      <li><strong>Long-Term Scheduler</strong>&nbsp;–&nbsp;Selects processes from job queue to add to ready queue (controls degree of multiprogramming).</li>
+      <li><strong>Short-Term Scheduler</strong>&nbsp;–&nbsp;Selects which ready process to execute next (CPU scheduler).</li>
+      <li><strong>Medium-Term Scheduler</strong>&nbsp;–&nbsp;Swaps processes in/out of memory to control load (used in swapping systems).</li>
+     </ul><br>
+     <h2>Process Scheduling</h2><br>
+     <ul style="margin-left: 20px; line-height: 2;">
+      <li><strong><u>Arrival Time</u></strong>&nbsp;–&nbsp;Time at which the process arrives in the ready queue.</li>
+       <li><strong><u>Completion Time</u></strong>&nbsp;–&nbsp;Time at which process completes its execution.</li>
+      <li><strong><u>Burst Time</u></strong>&nbsp;–&nbsp;Time required by a process for CPU execution.</li>
+      <li><strong><u>Turn Around Time</u></strong>&nbsp;–&nbsp;Time Difference between completion time and arrival time. <br>
+ <strong>Turn Around Time = Completion Time - Arrival Time</strong></li>
+      <li><strong><u>Waiting Time (WT)</u></strong>&nbsp;–&nbsp;Time Difference between turn around time and burst time. <br>
+ <strong>Waiting Time = Turnaround Time - Burst Time</strong></li>
+     </ul><br>
+     <h2>Scheduling Algorithms</h2><br>
+     <ul style="margin-top: 15px; margin-left: 20px; line-height: 2; font-size: 19px;">
+      <li><strong><u>First Come First Serve (FCFS)</u></strong>&nbsp;:&nbsp;Simplest scheduling algorithm that
+ schedules according to arrival times of processes.</li>
+      <li><strong><u>Shortest Job First (SJF)</u></strong>&nbsp;:&nbsp; Processes which have the shortest burst time are
+ scheduled first.</li>
+      <li><strong><u>Shortest Remaining Time First (SRTF)</u></strong>&nbsp;:&nbsp; It is a preemptive mode of SJF
+ algorithm in which jobs are scheduled according to the shortest remaining
+ time.</li>
+      <li><strong><u>Round Robin (RR) Scheduling</u></strong>&nbsp;:&nbsp;Each process is assigned a fixed time, in a
+ cyclic way.</li>
+      <li><strong><u>Priority Based scheduling (Non Preemptive)</u></strong>&nbsp;:&nbsp; In this scheduling, processes
+ are scheduled according to their priorities, i.e., highest priority process is
+ scheduled first. If priorities of two processes match, then scheduling is
+ according to the arrival time.</li>
+      <li><strong><u>Highest Response Ratio Next (HRRN)</u></strong>&nbsp;:&nbsp; In this scheduling, processes with
+ the highest response ratio are scheduled. This algorithm avoids starvation.
+ Response Ratio = (Waiting Time + Burst time) / Burst time</li>
+      <li><strong><u>Multilevel Queue Scheduling (MLQ)</u></strong>&nbsp;:&nbsp; According to the priority of the
+ process, processes are placed in the different queues. Generally high priority
+ processes are placed in the top level queue. Only after completion of
+ processes from the top level queue, lower level queued processes are
+ scheduled.</li>
+      <li><strong><u>Multilevel Feedback Queue (MLFQ) Scheduling</u></strong>&nbsp;:&nbsp; It allows the process to
+ move in between queues. The idea is to separate processes according to the
+ characteristics of their CPU bursts. If a process uses too much CPU time, it is
+ moved to a lower-priority queue.</li>
+     </ul>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operating System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">Operating System</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="menu.html">Menu</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <ul>
+        <li class="topp"><a href="index.html">Introduction</a></li>
+        <li><a href="type1.html">Types of OS</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="scheduling.html">Process Scheduling</a></li>
+         <li><a href="Thread.html">Thread</a></li>
+         <li><a href="Syncronization.html">Synchronization</a></li>
+         <li><a href="Deadlock.html">Deadlocks</a></li>
+         <li><a href="Memorymanagement.html">Memory Management</a></li>
+         <li><a href="DiskScheduling.html">Disk Scheduling</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>Synchronization  <img src="freepik__operating_system_color___rgb(17,45,78).png" alt="Operating System" style="height: 10%; width: 5%; margin-left: 50px;"></h1><br>
+      <p><strong>Synchronization</strong> in OS is the technique used to <strong>coordinate access to shared resources</strong> (like variables, files, or memory) when multiple <strong>processes or threads</strong> execute <strong>concurrently</strong>.</p><br>
+      <h2>Need Of Synchronization</h2><br>
+      <ul style="margin-left: 20px;">
+        <li>To prevent <strong>race conditions</strong> (when multiple processes access and modify shared data concurrently).</li>
+        <li>To maintain <strong>data consistency</strong>.</li>
+        <li>To ensure <strong>mutual exclusion</strong> (only one process accesses a critical section at a time).</li>
+        <li>To handle <strong>cooperation</strong> between processes (e.g., producer-consumer problems).</li>
+      </ul><br>
+      <h2>The Critical Section Problem:</h2><br>
+      <ul style="margin-left: 20px;">
+        <li><strong>Critical Section</strong>&nbsp;-&nbsp;The portion of the code in the program where shared variables
+ are accessed and/or updated.</li>
+        <li><strong>Remainder Section</strong>&nbsp;-&nbsp;The remaining portion of the program excluding the Critical
+ Section.</li>
+        <li><strong>Race around Condition</strong>&nbsp;-&nbsp;The final output of the code depends on the order in
+ which the variables are accessed. This is termed as the race around condition.</li>
+      </ul><br>
+      <h2>Solution for the Critical Section Problem:</h2><br>
+      <p> A solution for the critical section problem must satisfy the following three conditions:</p><br>
+      <ol style="margin-left: 20px; font-size: 18px;">
+        <li><strong><u>Mutual Exclusion</u></strong>&nbsp;-&nbsp;If a process P<sub>i</sub> is executing in its critical section, then no other
+ process is allowed to enter into the critical section.</li>
+        <li style="margin-top: 12px; line-height: 1.5;"><strong><u>Progress</u></strong>&nbsp;-&nbsp;If no process is executing in the critical section, then the decision of a
+ process to enter a critical section cannot be made by any other process that is
+ executing in its remainder section. The selection of the process cannot be postponed
+ indefinitely.</li>
+        <li style="margin-top: 12px; line-height: 1.5;"><strong><u>Bounded Waiting</u></strong>&nbsp;-&nbsp;There exists a bound on the number of times other processes
+ can enter into the critical section after a process has made a request to access the
+ critical section and before the request is granted.</li>
+      </ol><br>
+      <h2>Synchronization Tools:</h2><br>
+      <ol style="margin-left: 20px; line-height: 1.5; font-size: 18px;">
+        <li><strong><u>Semaphore</u></strong>&nbsp;:&nbsp;Semaphore is a protected variable or abstract data type that is
+ used to lock the resource being used. The value of the semaphore indicates the
+ status of a common resource. <br><br>  There are two types of semaphores: <br>
+<ul style="margin-left: 20px;">
+  <li><strong>Binary semaphores</strong>&nbsp;-&nbsp;Binary semaphores take only 0 and 1 as value and are used
+ to implement mutual exclusion and synchronize concurrent processes.</li>
+  <li><strong>Counting semaphores</strong>&nbsp;-&nbsp;(A counting semaphore is an integer variable whose value
+ can range over an unrestricted domain.</li>
+</ul><br></li>
+        <li><strong><u>Mutex</u></strong>&nbsp;:&nbsp;A mutex provides mutual exclusion, either producer or consumer can have the key (mutex) and proceed with their work. As long as the buffer is filled by the producer, the consumer needs to wait, and vice versa. At any point of time, only one thread can work with the entire buffer. The concept can be generalized using semaphore.</li>
+      </ol>
+      
+    </main>
+  </div>
+</body>
+</html>
